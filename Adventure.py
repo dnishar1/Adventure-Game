@@ -5,7 +5,7 @@ import sys
 
 def print_pause(pause):
     print(pause)
-    time.sleep(0)
+    time.sleep(1.75)
 
 
 def intro():
