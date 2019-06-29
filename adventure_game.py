@@ -5,7 +5,7 @@ import sys
 
 def print_pause(pause):
     print(pause)
-    time.sleep(1.75)
+    time.sleep(1.5)
 
 
 def intro():
@@ -14,21 +14,21 @@ def intro():
                 "on the Equator in central African Continent.")
 
 
-def random():
-    destination = random.choice(['home', 'work', 'vacation home'])
+def random_destination():
+    return random.choice([' home', ' work', ' vacation home'])
 
 
 def press_One(items):
     print_pause("You chose to go East")
     print_pause("You chose wisely")
-    print_pause("You are one step closer to your {random()}")
+    print_pause(f"You are one step closer to {random_destination()}")
     if '1' in items:
         print_pause("You already selected East, choose a different direction")
-        if '2' in items:
-            print_pause("Congradulations! You have reached your home safely")
+        if '3' in items:
+            print_pause("I am sorry, you're lost in the wilderness. :(")
             play_again(items)
     else:
-        print_pause("Choose this next direction wisely to reach home")
+        print_pause(f"Choose this next direction wisely to reach {random_destination()}")
         items.append('1')
     directions(items)
 
@@ -36,14 +36,14 @@ def press_One(items):
 def press_Two(items):
     print_pause("You chose to go South")
     print_pause("You chose wisely")
-    print_pause("You are one step closer to your home")
+    print_pause(f"You are one step closer to your {random_destination()}")
     if '2' in items:
         print_pause("You already selected South, choose a different direction")
         if '4' in items:
-            print_pause("Congradulations! You have reached your home safely")
+            print_pause(f"Congradulations! You have reached your                {random_destination()} safely")
             play_again(items)
     else:
-        print_pause("Choose this next direction wisely to reach home")
+        print_pause(f"Choose this next direction wisely to reach {random_destination()}")
         items.append('2')
     directions(items)
 
@@ -51,32 +51,35 @@ def press_Two(items):
 def press_Three(items):
     print_pause("You chose to go West")
     print_pause("You chose wisely")
-    print_pause("You are one step closer to your home")
+    print_pause(f"You are one step closer to your {random_destination()}")
     if '3' in items:
         print_pause("You already selected West, choose a different direction")
+        if '1' in items:
+            print_pause("I am sorry, you're lost in the wilderness. :(")
+            play_again(items)
     else:
-        print_pause("Choose this next direction wisely to reach home")
-    items.append('3')
+        print_pause(f"Choose this next direction wisely to reach {random_destination()}")
+        items.append('3')
     directions(items)
 
 
 def press_Four(items):
     print_pause("You chose to go North")
     print_pause("You chose wisely")
-    print_pause("You are one step closer to your home")
+    print_pause(f"You are one step closer to your {random_destination()}")
     if '4' in items:
         print_pause("You already selected North, choose a different direction")
-    if '2' in items:
-        print_pause("Congradulations! You have reached your home safely")
-        play_again(items)
+        if '2' in items:
+            print_pause(f"Congradulations! You have reached your                {random_destination()} safely")
+            play_again(items)
     else:
-        print_pause("Choose this next direction wisely to reach home")
-    items.append('4')
+        print_pause(f"Choose this next direction wisely to reach{random_destination()}")
+        items.append('4')
     directions(items)
 
 
 def directions(items):
-    print_pause("There are four directions you can take to reach your home\n")
+    print_pause(f"There are four directions you can take to reach your{random_destination()}\n")
     print_pause("Press 1 for East\n"
                 "Press 2 for South\n" "Press 3 for West \n"
                 "Press 4 for North")
@@ -103,6 +106,7 @@ def play_again(items):
         sys.exit()
     else:
         print_pause("This is an invalid input.")
+        play_again(items)
 
 
 def play_Direction_Game():
