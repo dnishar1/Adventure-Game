@@ -1,6 +1,6 @@
 # Adventure Game
 
-To play the game for MAC/Linux Users:
+To play the game for MAC/Linux users:
 1. Download and install latest version of python 3.xx on your computer.
 2. Download the source file from this repository
 3. Open Terminal
