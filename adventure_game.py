@@ -6,7 +6,7 @@ import sys
 def print_pause(pause):
     print(pause)
     time.sleep(1.5)
-
+ 
 
 def intro():
     print_pause("Welcome to Direction Adventure Game!")
