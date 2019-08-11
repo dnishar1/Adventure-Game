@@ -13,4 +13,3 @@ To play the game for Windows users:
 3. Open Command Prompt
 4. Navigate to the downloaded folder by typing ```cd/folderLocation```
 5. Run the game and start playing!
- 
