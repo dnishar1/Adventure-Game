@@ -13,4 +13,3 @@
 3. Open Command Prompt
 4. Navigate to the downloaded folder by typing ```cd/folderLocation/subfolder/.../...```
 5. Run the game and start playing!
-
